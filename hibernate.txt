@@ -1,0 +1,20 @@
+1. **** what is N+1 problem in hibernate? How can you resolve it? --> very important
+2. difference between load and get
+3. different states of the object and the flow diag for different states -> transient,persist,detached
+4. How to implement inheritance in hibernate? what are the 3 different strategies?
+5. Decribe session factory in hibernate. How do you create session factory? How can we create multiple session factory?
+ How can you connect multiple database in hibernate?
+6. Difference between hibernate and JPA.
+7. List of some important annotations in hibernate and their uses.
+8. Mappings in hibernate with one example in each case and how will you implement the same : 
+	One to One
+	One to many
+	Many to One
+	Many to Many
+9. cascade attribute in hibernate.
+10. difference between update and merge in hibernate
+11. How many different ways you can create the primary key
+12. Eager and Lazy Fetch difference
+13. What is parameter binding and SQL injection?
+14. What are the different levels of cache does hibernate support and how do u implement them?
+15. Go through Projections, Criteria API, Named Queries, Restrictions
