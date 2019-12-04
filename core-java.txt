@@ -22,3 +22,4 @@
 17. what are the different ways you can create an object? There are 5 different ways.
 18. why do you think 'set' does not contain get() methods as list?
 19. wild card and <? extends [Parent Class]>
+20. SOLID Principles in java and Gang Of Four
