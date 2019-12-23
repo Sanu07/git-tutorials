@@ -1,0 +1,25 @@
+1. difference between sleep and wait
+2. different types of design patterns : Structural, behaviourial, Creational.. 2 types from each category
+3. Use of serial version UID
+4. How to implement Immutable Class?
+5. String class implements which design pattern?
+6. Implement ArrayList of your own.
+7. Collection related questions from Google
+8. Internal structure of HashMap.
+9. Internal Structure of ArrayList, Iterator.
+10. Serialization and Deserialization
+	Which of the below variables will be serialized :
+	static int a -> will not be serialized because static keyword indicates that variable belongs to class not to 
+					object and only objects can be serialized.
+	transient int a -> tranient keyword does not allow a variable to be serialized.
+	What will be the default values of the variables that are not serialized?
+11. little bit knowledge on JAVA 8 features. Not mandatory..
+12. How to implement Singleton design pattern?
+13. Name some common scenarios where u found singleton design pattern and factory design pattern.
+14. Inheritance vs Composition.
+15. Composition - Aggregation - Association
+16. Runtime polymorphism and Compile time polymorphism with example.
+17. what are the different ways you can create an object? There are 5 different ways.
+18. why do you think 'set' does not contain get() methods as list?
+19. wild card and <? extends [Parent Class]>
+20. SOLID Principles in java and Gang Of Four
