@@ -879,4 +879,172 @@ class RemoveDuplicate{
     
     }
 }
+===================================================================================================
+You have given an integer array of size N. Array contains numbers from 1 to N-1 but a couple of numbers are missing in an array which also contains duplicates.
+
+Write a Java program to print the missing number from the sequence.
+
+For example, if given array is {1, 1, 2, 3, 5, 5, 7, 9, 9, 9} then it has length 10 and contains a number from 1 to 9. In this case, missing numbers are 4, 6, and 8
+Finally find the GCD of the array of the missing numbers.
+
+public class MissingNumbers{
+    
+    private static int[] findmissing(int[] arr)
+    {
+                int len=arr.length;
+            List<Integer> list1=new ArrayList<Integer>();
+            List<Integer> list2=new ArrayList<Integer>();
+            Arrays.sort(arr);
+            for(int i:arr)
+                list1.add(i);
+                for(int i=1;i<=len-1;i++) // check   for(int i=1;i<arr[arr.length-1];i++)
+                {
+                                if(list1.contains(i)){
+                                    continue;
+                                }
+                                else
+                                    list2.add(i);
+
+                }
+
+            Integer arrresult[] = new Integer[list2.size()];
+            arrresult=list2.toArray(arrresult);
+            int result[]=new int[list2.size()];
+
+            for(int i=0;i<list2.size();i++)
+              result[i]=arrresult[i].intValue();
+            return result;
+    }
+
+    private static int gcd(int a, int b)
+    {
+        if(a==0)
+            return b;
+
+        else
+            return  gcd(b%a,a);
+        
+    }
+    public static void main(String[] args) {
+        int arr1[]={1,1,1,1,1,1,1,1,2};
+        int arr2[]=findmissing(arr1);
+        System.out.println(Arrays.toString(arr2));
+        int gcdres = 0;
+        if(arr2.length > 1) {
+            gcdres = gcd(arr2[0],arr2[1]);
+            for(int i=1;i<arr2.length-1;i++)
+            {
+                gcdres=gcd(gcdres,arr2[i+1]);
+            }
+            System.out.println("GCD : "+gcdres);
+        }else if (arr2.length == 1) {
+            System.out.println(1);
+            return;
+        }
+    }
+}
+
+====================================================================================
+
+Remove Duplicates from a String.
+I/P -> geeksforgeeks
+O/P -> geksfor
+
+import java.util.*;
+
+class DuplicateRemove{
+    
+    private static String duplicateremove(String str){
+        String[] arr=str.split("");
+        String res[]={};
+        Set<String> set=new LinkedHashSet<String>(Arrays.asList(arr));
+
+        res=set.toArray(res);
+        String result="";
+        for(String s:res)
+            result+=s;
+        return result;
+    }
+
+    public static void main(String[] args) {
+        String str="geeksforgeeks";
+        System.out.println(duplicateremove(str));
+    }
+}
+
+====================================================================================
+Find all the permutations of a given String.
+Permutation formula :
+
+When no duplicate characters are present
+n!/(n-r)! where 'n' is the total number of alphabets. 'r' total number of alphabets that are to be arranged
+Ex: xyz -> total no of alphabets is 3.
+            no of alphabets to be arranged is 3
+            3!/(3-3)! Note: 0! = 1
+
+When duplicate characters are present     
+Ex: xxyzaaa ->  Formula :   7!/((7-7)! * 2! * 3!*)
+                            m!/((m-n)! * p! * q!)
+                            
+                            m-> total number of alphabets
+                            n-> total number of alphabets to be arranged
+                            p-> number of duplicate 'x'
+                            q-> number of duplicate 'a'
+===================================================================================
+
+import java.util.*;
+
+class Permutation{
+    
+    private static int repeatfreq(String str){
+        
+        String arr[]=str.split("");
+        Map<String, Integer> map=new HashMap<String,Integer>();
+        int mapvalue=0;
+        if(arr.length>=1)
+        {
+            map.put(arr[0],0);
+
+            for(String a:arr)
+            {
+                if(map.containsKey(a))
+                {
+                    mapvalue=map.get(a);
+                    map.put(a,mapvalue+1);
+                }
+                else
+                    map.put(a,1);
+            }
+        }
+
+                    System.out.println(map);
+
+         int permutationres=factorial(str.length());
+         System.out.println(str.length()+" "+factorial(str.length()));
+
+         System.out.println(permutationres);
+
+         for(Integer r:map.values())
+         {
+            
+
+            permutationres=permutationres/factorial(r);
+            System.out.println(factorial(r));
+             }
+         return permutationres;
+        }
+
+        private static int factorial(int n)
+        {
+            return (n==0||n==1)?1:n*factorial(n-1); // khatarnak super like
+        }
+
+    public static void main(String[] args) {
+        String str="xxyzaaa";
+        System.out.println(repeatfreq(str));
+
+
+    }
+}
+==========================================================================================
 
