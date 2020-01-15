@@ -1,0 +1,6 @@
+1. Distributed Cache
+2. Sharding
+3. MEMCached
+4. Architecture of popular Sites like
+Stackoverflow, facebook, whatsapp, twitter, tinder, google
+5.Consistent hashing
