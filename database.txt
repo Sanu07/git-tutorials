@@ -1,0 +1,2 @@
+1. Different kind of JOINS
+2. Normalization 1NF, 2NF, 3NF, BCNF, 4NF, 5NF

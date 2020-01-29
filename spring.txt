@@ -1,0 +1,7 @@
+1.what is dependency Injection?
+2.what is IoC design pattern?
+3.Create a simple Spring standalone application which prints 2 different Employees
+4.Employee1 : using setter Injection
+5.Employee2 : using Constructor Injection
+6. Difference between PUT, POST, GET, DELETE
+7. create a basic spring application with CRUD functionalities using Hibernate.

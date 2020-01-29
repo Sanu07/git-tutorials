@@ -1,0 +1,13 @@
+1.Normalization
+https://www.youtube.com/watch?v=xoTyrdT9SZI&list=PLLGlmW7jT-nTr1ory9o2MgsOmmx2w8FB3
+
+2.Inner join, Left outer join/Left join, Right outer join, Cross join
+3.SQL subqueries, nested queries
+4. Difference between Statement Prepared statement and Callable statement
+5. Very very basic of cursor and trigger
+  What is cursor/trigger
+  Why we use it
+6. basic aggregate functions in SQL count(*), max(), min() etc
+  
+
+
